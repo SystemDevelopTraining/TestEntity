@@ -15,10 +15,10 @@ namespace TestEntity
         public Form1()
         {
             InitializeComponent();
-            InsertHoges();
+            
         }
 
-        static void InsertHoges()
+        static void InsertHoges(string asdf)
         {
             //usingを使用しているのでブロックを抜けた時に
             //BooksDbContextオブジェクトは破棄される
@@ -28,13 +28,18 @@ namespace TestEntity
                 var hoge1 = new TestEntity.Models.Hoge
                 {
                     //IDは自動生成の為、登録しない
-                    Name = "fuga",
+                    Name = asdf
                 };
                 //book1の追加
                 db.Hoges.Add(hoge1);
                 //DBの更新
                 db.SaveChanges();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            InsertHoges(textBox1.Text);
         }
     }
 }
