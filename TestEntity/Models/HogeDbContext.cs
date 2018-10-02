@@ -20,6 +20,8 @@
 
         public DbSet<TestEntity.Models.Hoge> Hoges { get; set; }
         public DbSet<TestEntity.Models.Human> Humans{ get; set; }
+        public DbSet<TestEntity.Models.Kaiin> Kaiins { get; set; }
+        public DbSet<TestEntity.Models.Order> Orders { get; set; }
         // モデルに含めるエンティティ型ごとに DbSet を追加します。Code First モデルの構成および使用の
         // 詳細については、http://go.microsoft.com/fwlink/?LinkId=390109 を参照してください。
 
